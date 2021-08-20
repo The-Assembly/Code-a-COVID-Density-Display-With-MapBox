@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+        .mapboxgl-popup {
+             max-width: 75px;
+       }
+    </style>
+    <title>Create your own corona map</title>
+</head>
+
+<body>
+    <div class="header">
+        <h4>Corona Density Map</h4>
+    </div>
+    <div id='map'></div>
+    <style>
+        .header {
+            padding: 10px;
+            text-align: center;
+            background: #601abc;
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+        }
+    </style>
+    }
+</body>
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWJoZWVrIiwiYSI6ImNrcWc3ZWJ0YjBnazgydW9lcTlqdmhrNm0ifQ.V3rQOUBWpBd4raAmWZritQ';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        zoom: 1,
+        center: [0, 20]
+    });
+</script>
+
+<script src="index.js"></script>
+
+</html>
